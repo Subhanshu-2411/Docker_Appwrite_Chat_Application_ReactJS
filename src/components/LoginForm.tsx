@@ -1,11 +1,24 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
+import {api} from "../api";
 
 export default function LoginForm() {
 
+  const navigate = useNavigate();
+
   async function login(e: any) {
     e.preventDefault();
+
+    const name = e.target.name.value;
+    const room = e.target.room.value;
+
+    await api.account.createAnonymousSession();
+
+    await api.account.updateName(name);
+
+    navigate('/chat?room=' + room);
+
   }
 
   return (

@@ -12,8 +12,8 @@ function App() {
         element={
           <div className="app-container">
             <div className="content">
-              <span className="do-title">DigitalOcean Tech Talk</span>
-              <span className="appwrite-chat">Appwrite Chat</span>
+              <span className="do-title">Welcome To Chat Space</span>
+              <span className="appwrite-chat">CHATTY!!!</span>
               <LoginForm />
             </div>
           </div>
